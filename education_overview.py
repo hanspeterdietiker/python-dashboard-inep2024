@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 df_education = pd.read_csv("samples/MICRODADOS_CADASTRO_CURSOS_2024.CSV", 
                            sep=';', encoding='iso-8859-1', low_memory=False)
 
-total_cursos = len(df_education)
+total_cursos = df_education['NO_CINE_ROTULO'].count()
 
 
 fig_total = go.Figure(go.Indicator(
